@@ -7,6 +7,14 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+          .card{margin:10px}
+
+          .carousel-inner img {
+            width: 100%;
+            height: 100%;
+          }
+        </style>
     </head>
     <body>
         <div class="container container-sm container-md container-lg container-xl">
@@ -14,7 +22,7 @@
             <!-- Alert -->
             <div class="alert alert-warning alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
-                <strong>Attenzione!</strong> Questo non è un vero sito per turisti. Alcune informazioni potrebbero non essere aggiornate.
+                <strong>Attenzione!</strong> Alcune informazioni potrebbero non essere aggiornate.
             </div>
 
             <!-- Jumbotron -->
@@ -22,10 +30,10 @@
               <h1 style="text-align: center;">ITALIA </h1>
               <div class="row">
                 <div class="col my-auto">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/1280px-Flag_of_Italy.svg.png" class="img-fluid" alt="Bandiera"/>
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/1280px-Flag_of_Italy.svg.png" class="img-fluid" style="height: 500px" alt="Bandiera"/>
                 </div>
                 <div class="col my-auto">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Emblem_of_Italy.svg/800px-Emblem_of_Italy.svg.png" class="img-fluid rounded float-right" alt="Emblema"/>
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Emblem_of_Italy.svg/800px-Emblem_of_Italy.svg.png" class="img-fluid rounded float-right" style="height: 500px" alt="Emblema"/>
                 </div>
               </div>
               </br>
@@ -36,15 +44,29 @@
 
             <!-- Badge -->
             <h2> Indice <span class="badge badge-info">Clicca</span></h2>
-
-            <!-- List Group -->
-            <div class="list-group">
+            
+            <!-- https://getbootstrap.com/docs/4.0/utilities/display/ -->
+            <!-- Vertical List Group -->
+            <div class="d-md-none">
+              <div class="list-group">
                 <a href="#FAQ" class="list-group-item list-group-item-action">FAQ</a>
                 <a href="#Storia" class="list-group-item list-group-item-action">Storia</a>
                 <a href="#Geografia fisica" class="list-group-item list-group-item-action">Geografia fisica</a>
                 <a href="#Politica" class="list-group-item list-group-item-action">Politica</a>
                 <!-- Badge -->
                 <a href="#Galleria" class="list-group-item list-group-item-action">Galleria <span class="badge badge-secondary">Nuovo</span></a>
+              </div>
+            </div>
+            <!-- Horizontal List Group -->
+            <div class="d-none d-md-block">
+              <div class="list-group list-group-horizontal">
+                  <a href="#FAQ" class="list-group-item list-group-item-action">FAQ</a>
+                  <a href="#Storia" class="list-group-item list-group-item-action">Storia</a>
+                  <a href="#Geografia fisica" class="list-group-item list-group-item-action">Geografia fisica</a>
+                  <a href="#Politica" class="list-group-item list-group-item-action">Politica</a>
+                  <!-- Badge -->
+                  <a href="#Galleria" class="list-group-item list-group-item-action">Galleria <span class="badge badge-secondary">Nuovo</span></a>
+              </div>
             </div>
             </br>
 
@@ -274,7 +296,7 @@
                   Fino agli anni cinquanta l'Italia fu il primo e unico paese a sfruttare, nella zona di Larderello e poi nell'area del Monte Amiata, l'energia geotermica per produrre energia elettrica. L'elevato gradiente geotermico che caratterizza parte della penisola rende altre province potenzialmente sfruttabili: ricerche svolte negli anni sessanta-settanta individuarono potenziali campi geotermici nel Lazio e in Toscana, così pure in gran parte delle isole vulcaniche.[68]</p>
               </div>
               <div id="AttivitàSismica" class="container tab-pane fade text-justify"><br>
-                <h3>Attività Sismica</h3>
+                <h3>Attività sismica</h3>
                 <p>Per la situazione geodinamica il suo territorio è frequentemente soggetto a terremoti dando all'Italia il primato in Europa per questi fenomeni: su 1 300 sismi distruttivi avvenuti nel II millennio nel Mediterraneo centrale ben 500 hanno interessato l'Italia; analisi dei movimenti focali indicano che essi sono per lo più distribuiti lungo le aree interessate dalla tettonica alpina e appenninica, ove sono causati rispettivamente da movimenti lungo faglie. Nel Tirreno meridionale, la distribuzione degli ipocentri, fino a una profondità di 500 chilometri indicherebbe la presenza di un piano di Benioff dato dalla subduzione della litosfera ionica.</p>
               </div>
               <div id="Idrografia" class="container tab-pane fade text-justify"><br>
@@ -294,95 +316,119 @@
             </br>
             <h1 id="Politica">Politica - Istituzioni</h1>
             <h3>Le più alte cariche in ordine di importanza</h3>
-            <!-- Cards -->
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card" style="width:350px; height:675px;">
-                  <img class="card-img-top img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Presidente_Sergio_Mattarella.jpg/800px-Presidente_Sergio_Mattarella.jpg" alt="MattarellaImage" style="width:100%">
-                  <div class="card-body">
-                    <h4 class="card-title">Sergio Mattarella</h4>
-                    <p class="card-text">12º Presidente della Repubblica Italiana</p>
-                    <a href="https://www.quirinale.it/page/biografia" target="_blank" class="btn btn-primary">Biografia</a>
+              <!-- Cards -->
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                  <div class="card" style="width:350px; height:600px;">
+                    <img class="card-img-top img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Presidente_Sergio_Mattarella.jpg/800px-Presidente_Sergio_Mattarella.jpg" alt="MattarellaImage" style="width: 100%; height: 400px; overflow:hidden;">
+                    <div class="card-body">
+                      <h4 class="card-title">Sergio Mattarella</h4>
+                      <p class="card-text">12º Presidente della Repubblica Italiana</p>
+                      <a href="https://www.quirinale.it/page/biografia" target="_blank" class="btn btn-primary">Biografia</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card" style="width:350px; height:675px;">
-                  <img class="card-img-top img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Presidente_Alberti_Casellati_Quirinale_%28cropped%29.jpg/800px-Presidente_Alberti_Casellati_Quirinale_%28cropped%29.jpg" alt="CasellatiImage" style="width:100%">
-                  <div class="card-body">
-                    <h4 class="card-title">Maria Elisabetta Alberti Casellati</h4>
-                    <p class="card-text">Presidente del Senato della Repubblica</p>
-                    <a href="http://www.senato.it/4523" target="_blank" class="btn btn-primary">Biografia</a>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                  <div class="card" style="width:350px; height:600px;">
+                    <img class="card-img-top img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Presidente_Alberti_Casellati_Quirinale_%28cropped%29.jpg/800px-Presidente_Alberti_Casellati_Quirinale_%28cropped%29.jpg" alt="CasellatiImage" style="width: 100%; height: 400px; overflow:hidden;">
+                    <div class="card-body">
+                      <h4 class="card-title">Maria Elisabetta Alberti Casellati</h4>
+                      <p class="card-text">Presidente del Senato della Repubblica</p>
+                      <a href="http://www.senato.it/4523" target="_blank" class="btn btn-primary">Biografia</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card" style="width:350px; height:675px;">
-                  <img class="card-img-top img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Roberto_Fico_2018.jpg/800px-Roberto_Fico_2018.jpg" alt="FicoImage" style="width:100%;">
-                  <div class="card-body">
-                    <h4 class="card-title">Roberto Fico</h4>
-                    <p class="card-text">Presidente della Camera dei Deputati</p>
-                    <a href="https://presidente.camera.it/7" target="_blank" class="btn btn-primary">Biografia</a>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                  <div class="card" style="width:350px; height:600px;">
+                    <img class="card-img-top img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Roberto_Fico_2018.jpg/800px-Roberto_Fico_2018.jpg" alt="FicoImage" style="width: 100%; height: 400px; overflow:hidden;">
+                    <div class="card-body">
+                      <h4 class="card-title">Roberto Fico</h4>
+                      <p class="card-text">Presidente della Camera dei Deputati</p>
+                      <a href="https://presidente.camera.it/7" target="_blank" class="btn btn-primary">Biografia</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            </br>
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card" style="width:350px; height:675px">
-                  <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/0/01/Giuseppe_Conte_Official.jpg" alt="ConteImage" style="width:100%">
-                  <div class="card-body">
-                    <h4 class="card-title">Giuseppe Conte</h4>
-                    <p class="card-text">Presidente del Consiglio dei Ministri della Repubblica Italiana</p>
-                    <a href="http://www.governo.it/it/governo/conte-ii/presidente-del-consiglio/giuseppe-conte" target="_blank" class="btn btn-primary">Biografia</a>
+                
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                  <div class="card" style="width:350px; height:600px">
+                    <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/0/01/Giuseppe_Conte_Official.jpg" alt="ConteImage" style="width: 100%; height: 400px; overflow:hidden;">
+                    <div class="card-body">
+                      <h4 class="card-title">Giuseppe Conte</h4>
+                      <p class="card-text">Presidente del Consiglio dei Ministri della Repubblica Italiana</p>
+                      <a href="http://www.governo.it/it/governo/conte-ii/presidente-del-consiglio/giuseppe-conte" target="_blank" class="btn btn-primary">Biografia</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card" style="width:350px; height:675px;">
-                  <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/PresMorelliCropped.jpg/335px-PresMorelliCropped.jpg" alt="MorelliImage" style="width:100%">
-                  <div class="card-body">
-                    <h4 class="card-title">Mario Rosario Morelli</h4>
-                    <p class="card-text">Presidente della Corte costituzionale</p>
-                    <a href="https://www.cortecostituzionale.it/actionBiografia.do?codice_giudice=121" target="_blank" class="btn btn-primary">Biografia</a>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                  <div class="card" style="width:350px; height:600px;">
+                    <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/PresMorelliCropped.jpg/335px-PresMorelliCropped.jpg" alt="MorelliImage" style="width: 100%; height: 400px; overflow:hidden;">
+                    <div class="card-body">
+                      <h4 class="card-title">Mario Rosario Morelli</h4>
+                      <p class="card-text">Presidente della Corte costituzionale</p>
+                      <a href="https://www.cortecostituzionale.it/actionBiografia.do?codice_giudice=121" target="_blank" class="btn btn-primary">Biografia</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card" style="width:350px; height:675px;">
-                  <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Presidente_Napolitano.jpg/344px-Presidente_Napolitano.jpg" alt="NapolitanoImage" style="width:100%">
-                  <div class="card-body">
-                    <h4 class="card-title">Giorgio Napolitano</h4>
-                    <p class="card-text">Presidente Emerito della Repubblica Italiana</p>
-                    <a href="http://presidenti.quirinale.it/Napolitano/nap-biografia.htm" target="_blank" class="btn btn-primary">Biografia</a>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                  <div class="card" style="width:350px; height:600px;">
+                    <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Presidente_Napolitano.jpg/344px-Presidente_Napolitano.jpg" alt="NapolitanoImage" style="width: 100%; height: 400px; overflow:hidden;">
+                    <div class="card-body">
+                      <h4 class="card-title">Giorgio Napolitano</h4>
+                      <p class="card-text">Presidente Emerito della Repubblica Italiana</p>
+                      <a href="http://presidenti.quirinale.it/Napolitano/nap-biografia.htm" target="_blank" class="btn btn-primary">Biografia</a>
+                    </div>
                   </div>
-                </div>
+                </div> 
               </div>
-              
-          </div>
             </br>
 
             <h1 id="Galleria">Galleria</h1>
-            <div class="row">
-              <div class="col-xl col-lg col-sm col">
-                <h3> Milano </h3>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Milano_piazza_Duomo.jpg/390px-Milano_piazza_Duomo.jpg" class="float-left img-thumbnail img-fluid"/>
+
+            <!-- Carousel -->
+            <div id="demo" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="3"></li>
+              </ul>
+              <!-- The slideshow -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="https://wallpaperset.com/w/full/0/d/f/458260.jpg" alt="Roma">
+                  <div class="carousel-caption">
+                    <h3>Roma</h3>
+                    <p><i>La città eterna</i></p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://c.wallhere.com/photos/60/96/milan_cathedral_cathedral_Italy_Milan-1457787.jpg!d" alt="Milano">
+                  <div class="carousel-caption">
+                    <h3>Milano</h3>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://viaggileonardi.com/wp-content/uploads/2018/11/Italy-napoli-at-night-1920x1080.jpg" alt="Napoli">
+                  <div class="carousel-caption">
+                    <h3>Napoli</h3>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://cdn.statically.io/img/wallpapercave.com/wp/wp4195797.jpg" alt="Torino">
+                  <div class="carousel-caption">
+                    <h3>Torino</h3>
+                  </div>
+                </div>
               </div>
-            </div>
-            </br>
-            <div class="row">
-              <div class="col-xl col-lg col-sm col">
-                <h3> Roma </h3>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Roma_dall%27aereo.JPG/390px-Roma_dall%27aereo.JPG" class="float-left rounded-circle img-fluid"/>
-              </div>
-            </div>
-            </br>
-            <div class="row">
-              <div class="col-xl col-lg col-sm col">
-                <h3> Napoli </h3>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Naples_from_the_Castello_Sant_Elmo_with_Abbazia_San_Martino_the_port_and_the_Vesuv.jpg/390px-Naples_from_the_Castello_Sant_Elmo_with_Abbazia_San_Martino_the_port_and_the_Vesuv.jpg" class="float-left rounded img-fluid"/>
-              </div>             
+              <!-- Left and right controls -->
+              <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
+    
             </div>
           </br>
 
